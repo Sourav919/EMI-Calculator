@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <script src="/static/chart.min.js"></script>
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EMI Calculator</h1>
+        <div class="inputs">
+            <label for="loanAmount">Loan amount:</label>
+            <input type="range" id="loanAmount" min="10000" max="5000000" step="10000" value="1000000" oninput="updateValuesFromSlider('loanAmount')">
+            <input type="number" id="loanAmountInput" min="10000" max="5000000" step="10000" value="1000000" oninput="updateValuesFromInput('loanAmount')">
+            <span id="loanAmountValue">₹ 1000000</span>
+        
+            <label for="rateOfInterest">Rate of interest (p.a.):</label>
+            <input type="range" id="rateOfInterest" min="1" max="15" step="0.1" value="4.2" oninput="updateValuesFromSlider('rateOfInterest')">
+            <input type="number" id="rateOfInterestInput" min="1" max="30" step="0.1" value="4.2" oninput="updateValuesFromInput('rateOfInterest')">
+            <span id="rateOfInterestValue">4.2%</span>
+        
+            <label for="loanTenure">Loan tenure (years):</label>
+            <input type="range" id="loanTenure" min="1" max="30" step="1" value="5" oninput="updateValuesFromSlider('loanTenure')">
+            <input type="number" id="loanTenureInput" min="1" max="30" step="1" value="5" oninput="updateValuesFromInput('loanTenure')">
+            <span id="loanTenureValue">5 Yr</span>
+        </div>
+        
+        <div class="results">
+            <h2>Monthly EMI: <span id="monthlyEMI">₹ 0</span></h2>
+            <p>Principal amount: ₹ <span id="principalAmount">0</span></p>
+            <p>Total interest: ₹ <span id="totalInterest">0</span></p>
+            <p>Total amount: ₹ <span id="totalAmount">0</span></p>
+        </div>
+    </div>
+
+    <!-- Social Media Icons Section -->
+    <div class="social-icons">
+        
+        <a href="https://www.linkedin.com/in/sourav-bhardwaj/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Sourav919" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://souravportfoliowebsite.vercel.app/" target="_blank"><i class="fas fa-briefcase"></i></a>
+        <a href="https://www.instagram.com/sourav__999/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
