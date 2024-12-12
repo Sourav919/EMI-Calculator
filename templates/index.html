@@ -17,17 +17,17 @@
         <div class="inputs">
             <label for="loanAmount">Loan amount:</label>
             <input type="range" id="loanAmount" min="10000" max="5000000" step="10000" value="1000000" oninput="updateValuesFromSlider('loanAmount')">
-            <input type="number" id="loanAmountInput" min="10000" max="5000000" step="10000" value="1000000" oninput="updateValuesFromInput('loanAmount')">
+            <input type="number" id="loanAmountInput" min="0" max="5000000" step="10000" value="1000000" oninput="updateValuesFromInput('loanAmount')">
             <span id="loanAmountValue">₹ 1000000</span>
         
             <label for="rateOfInterest">Rate of interest (p.a.):</label>
             <input type="range" id="rateOfInterest" min="1" max="15" step="0.1" value="4.2" oninput="updateValuesFromSlider('rateOfInterest')">
-            <input type="number" id="rateOfInterestInput" min="1" max="30" step="0.1" value="4.2" oninput="updateValuesFromInput('rateOfInterest')">
+            <input type="number" id="rateOfInterestInput" min="0" max="30" step="0.1" value="4.2" oninput="updateValuesFromInput('rateOfInterest')">
             <span id="rateOfInterestValue">4.2%</span>
         
             <label for="loanTenure">Loan tenure (years):</label>
             <input type="range" id="loanTenure" min="1" max="30" step="1" value="5" oninput="updateValuesFromSlider('loanTenure')">
-            <input type="number" id="loanTenureInput" min="1" max="30" step="1" value="5" oninput="updateValuesFromInput('loanTenure')">
+            <input type="number" id="loanTenureInput" min="0" max="30" step="1" value="5" oninput="updateValuesFromInput('loanTenure')">
             <span id="loanTenureValue">5 Yr</span>
         </div>
         
